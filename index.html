@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JD84 — Apps, Courses & Content</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#2B7F6B;--teal-dk:#085041;--teal-lt:#E1F5EE;--teal-md:#9FE1CB;--coral:#B85C4A;--coral-dk:#712B13;--coral-lt:#FAECE7;--cream:#F5F2EC;--ink:#1C1C1A;--ink-md:#56564F;--ink-lt:#909088;--bdr:rgba(28,28,26,.10);--bdr-md:rgba(28,28,26,.18);--white:#fff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--bdr);padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-ring{width:38px;height:38px;border-radius:50%;border:2.5px solid var(--coral);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;flex-shrink:0}
+.logo-ring .n84{font-family:'DM Serif Display',serif;font-size:14px;color:var(--teal);line-height:1}
+.logo-ring .njd{font-size:8.5px;font-weight:500;color:var(--coral);letter-spacing:.3px;line-height:1}
+.logo-wm{font-family:'DM Serif Display',serif;font-size:21px;color:var(--ink);letter-spacing:-.3px}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:13.5px;color:var(--ink-md);text-decoration:none;transition:color .18s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--coral)!important;color:var(--white)!important;padding:9px 18px;border-radius:7px;font-weight:500!important;transition:opacity .18s!important}
+.nav-cta:hover{opacity:.85!important}
+/* HERO */
+.hero{background:var(--white);border-bottom:1px solid var(--bdr);padding:96px 48px 88px;text-align:center}
+.hero-pill{display:inline-block;font-size:11px;font-weight:500;letter-spacing:1.1px;text-transform:uppercase;color:var(--teal-dk);background:var(--teal-lt);border:1px solid var(--teal-md);padding:5px 16px;border-radius:999px;margin-bottom:28px}
+.hero h1{font-family:'DM Serif Display',serif;font-size:54px;line-height:1.1;letter-spacing:-1.2px;color:var(--ink);max-width:700px;margin:0 auto 20px}
+.hero h1 em{font-style:italic;color:var(--coral)}
+.hero-sub{font-size:16px;color:var(--ink-md);max-width:460px;margin:0 auto 44px;line-height:1.7}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-fill{background:var(--coral);color:var(--white);padding:13px 28px;border-radius:7px;font-size:14px;font-weight:500;text-decoration:none;transition:opacity .18s;display:inline-block}
+.btn-fill:hover{opacity:.86}
+.btn-fill.teal{background:var(--teal)}
+.btn-ghost{background:transparent;color:var(--ink);padding:13px 28px;border-radius:7px;font-size:14px;text-decoration:none;border:1px solid var(--bdr-md);transition:background .18s;display:inline-block}
+.btn-ghost:hover{background:var(--cream)}
+/* SECTIONS */
+.section{padding:80px 48px}
+.section-white{background:var(--white)}
+.section-cream{background:var(--cream)}
+.section-head{text-align:center;margin-bottom:52px}
+.section-tag{display:block;font-size:10.5px;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-lt);margin-bottom:12px}
+.section-head h2{font-family:'DM Serif Display',serif;font-size:36px;letter-spacing:-.6px;color:var(--ink);margin-bottom:12px;line-height:1.15}
+.section-head p{font-size:15px;color:var(--ink-md);max-width:420px;margin:0 auto}
+/* CARDS */
+.card-grid{max-width:980px;margin:0 auto;display:grid;gap:18px}
+.col-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{background:var(--white);border:1px solid var(--bdr);border-radius:14px;padding:28px 26px;transition:border-color .2s,transform .2s}
+.section-white .card{background:var(--cream);border-color:transparent}
+.card:hover{border-color:var(--bdr-md);transform:translateY(-2px)}
+.card-icon{width:46px;height:46px;border-radius:11px;margin-bottom:20px;display:flex;align-items:center;justify-content:center;font-size:22px}
+.ic-teal{background:var(--teal-lt)}
+.ic-coral{background:var(--coral-lt)}
+.ic-slate{background:#EEF1F6}
+.ic-amber{background:#FEF3E2}
+.ic-rose{background:#FDEDF0}
+.ic-coffee{background:#FDF6EE}
+.card-type{font-size:10.5px;font-weight:500;letter-spacing:.9px;text-transform:uppercase;color:var(--ink-lt);margin-bottom:6px}
+.card h3{font-family:'DM Serif Display',serif;font-size:21px;color:var(--ink);margin-bottom:10px;letter-spacing:-.2px}
+.card p{font-size:13.5px;color:var(--ink-md);line-height:1.65;margin-bottom:20px}
+.badge{display:inline-block;font-size:11px;font-weight:500;padding:4px 12px;border-radius:999px;margin-bottom:20px}
+.badge-free{background:var(--teal-lt);color:var(--teal-dk)}
+.badge-paid{background:var(--coral-lt);color:var(--coral-dk)}
+.badge-soon{background:#EEF1F6;color:#445566}
+.badge-live{background:#FEF3E2;color:#7A5000}
+.badge-coffee{background:#FDF6EE;color:#7A4500}
+.card-btn{display:block;text-align:center;padding:10px 0;border-radius:7px;font-size:13.5px;font-weight:500;text-decoration:none;transition:opacity .18s}
+.card-btn:hover{opacity:.82}
+.cb-teal{background:var(--teal);color:var(--white)}
+.cb-coral{background:var(--coral);color:var(--white)}
+.cb-coffee{background:#D97A2B;color:var(--white)}
+.cb-ghost{border:1px solid var(--bdr-md);color:var(--ink-md)}
+/* ACADEMY FEATURE */
+.academy-feature{max-width:980px;margin:0 auto;background:var(--white);border:1px solid var(--bdr);border-radius:14px;display:grid;grid-template-columns:1fr auto;overflow:hidden}
+.af-left{padding:40px}
+.af-left h3{font-family:'DM Serif Display',serif;font-size:26px;letter-spacing:-.4px;color:var(--ink);margin-bottom:12px}
+.af-left p{font-size:14px;color:var(--ink-md);line-height:1.7;margin-bottom:24px;max-width:480px}
+.af-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.af-pill{font-size:12px;padding:5px 13px;border-radius:999px;border:1px solid var(--bdr-md);color:var(--ink-md)}
+.af-right{background:var(--ink);padding:40px 36px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:200px;text-align:center}
+.af-price{font-family:'DM Serif Display',serif;font-size:52px;color:var(--white);line-height:1;margin-bottom:4px}
+.af-note{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:24px}
+.af-enrol{display:block;background:var(--coral);color:var(--white);padding:13px 28px;border-radius:7px;font-size:14px;font-weight:500;text-decoration:none;transition:opacity .18s;width:100%;text-align:center}
+.af-enrol:hover{opacity:.86}
+.af-secure{font-size:11px;color:rgba(255,255,255,.25);margin-top:10px}
+/* SUPPORT */
+.support-block{max-width:980px;margin:0 auto;background:var(--white);border:1px solid var(--bdr);border-radius:14px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.support-block h2{font-family:'DM Serif Display',serif;font-size:30px;letter-spacing:-.5px;color:var(--ink);margin-bottom:14px;line-height:1.2}
+.support-block > div p{font-size:14px;color:var(--ink-md);line-height:1.7;margin-bottom:12px}
+.support-right{background:var(--cream);border-radius:12px;padding:32px 28px;text-align:center;border:1px solid var(--bdr)}
+.support-right .big-coffee{font-size:40px;margin-bottom:14px;display:block}
+.support-right h3{font-family:'DM Serif Display',serif;font-size:20px;color:var(--ink);margin-bottom:8px}
+.support-right p{font-size:13px;color:var(--ink-md);margin-bottom:20px;line-height:1.6}
+/* FOOTER */
+footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px;display:flex;align-items:center;justify-content:space-between}
+.footer-left{display:flex;align-items:center;gap:20px}
+.footer-left p{font-size:12px;color:var(--ink-lt)}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:12px;color:var(--ink-lt);text-decoration:none;transition:color .18s}
+.footer-links a:hover{color:var(--ink)}
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero-pill{animation:fadeUp .4s ease both}
+.hero h1{animation:fadeUp .4s .08s ease both}
+.hero-sub{animation:fadeUp .4s .16s ease both}
+.hero-btns{animation:fadeUp .4s .24s ease both}
+/* RESPONSIVE */
+@media(max-width:740px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .hero{padding:64px 24px 56px}
+  .hero h1{font-size:36px}
+  .section{padding:56px 20px}
+  .academy-feature{grid-template-columns:1fr}
+  .af-right{padding:36px 28px}
+  .support-block{grid-template-columns:1fr;gap:28px;padding:32px 24px}
+  footer{flex-direction:column;gap:16px;padding:24px 20px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-ring"><span class="n84">84</span><span class="njd">JD</span></div>
+    <span class="logo-wm">JD84</span>
+  </a>
+  <div class="nav-links">
+    <a href="#apps">Apps</a>
+    <a href="#courses">Courses</a>
+    <a href="#channels">Channels</a>
+    <a href="#support">Support</a>
+    <a href="#courses" class="nav-cta">Get Academy84 — £84</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-pill">One person · Five projects · No filler</div>
+  <h1>Apps, courses and content that <em>actually work</em></h1>
+  <p class="hero-sub">JD84 is a one-person brand building useful things — a finance app, a cybersecurity course, two YouTube channels, and more on the way.</p>
+  <div class="hero-btns">
+    <a href="#courses" class="btn-fill">Start the cybersecurity course — £84</a>
+    <a href="vault84/index.html" class="btn-ghost">Download Vault84 — free</a>
+  </div>
+</div>
+
+<!-- APPS -->
+<div class="section section-cream" id="apps">
+  <div class="section-head">
+    <span class="section-tag">Apps</span>
+    <h2>Tools you can actually use</h2>
+    <p>Free, private, no nonsense. Your data stays on your device where it belongs.</p>
+  </div>
+  <div class="card-grid col-2">
+    <div class="card">
+      <div class="card-icon ic-teal">💰</div>
+      <div class="card-type">Android app</div>
+      <h3>Vault84</h3>
+      <p>The private, offline, zero-clutter money manager. No data mining, no subscription fees, no ads. Built by a solo developer for people who want to actually take control of their budget.</p>
+      <div><span class="badge badge-free">Free to download</span></div>
+      <a href="vault84/index.html" class="card-btn cb-teal">Visit the Vault84 page</a>
+    </div>
+    <div class="card">
+      <div class="card-icon ic-coffee">☕</div>
+      <div class="card-type">Support the work</div>
+      <h3>Vault84 is free — but coffee helps</h3>
+      <p>If Vault84 has helped you stop over-tracking and finally take control of your budget, consider buying me a coffee to help keep the updates coming. No pressure, no subscription — just a one-off thanks.</p>
+      <div><span class="badge badge-coffee">Pay what you want</span></div>
+      <a href="https://www.buymeacoffee.com" class="card-btn cb-coffee">Buy me a coffee ☕</a>
+    </div>
+  </div>
+</div>
+
+<!-- COURSES -->
+<div class="section section-white" id="courses">
+  <div class="section-head">
+    <span class="section-tag">Courses</span>
+    <h2>Break into cybersecurity without the jargon</h2>
+    <p>ISC2 CC aligned. UK focused. Built for career changers, not techies.</p>
+  </div>
+  <div class="academy-feature">
+    <div class="af-left">
+      <div class="card-type">Online course</div>
+      <h3>Academy84</h3>
+      <p>A 12-week introduction to cybersecurity built around the ISC2 CC exam framework. Everything is explained through business logic and real UK case studies — not jargon. Short modules, interactive activities, and a quiz at the end of each week. Taught by someone who runs this course professionally. No tech background required.</p>
+      <div class="af-pills">
+        <span class="af-pill">12 weeks · ~48 modules</span>
+        <span class="af-pill">ISC2 CC aligned</span>
+        <span class="af-pill">UK case studies</span>
+        <span class="af-pill">GDPR &amp; NCSC framing</span>
+        <span class="af-pill">Interactive activities</span>
+        <span class="af-pill">No tech background needed</span>
+      </div>
+      <a href="#" class="btn-fill">View full course details</a>
+    </div>
+    <div class="af-right">
+      <div class="af-price">£84</div>
+      <div class="af-note">one-off payment · lifetime access</div>
+      <a href="#" class="af-enrol">Enrol now</a>
+      <div class="af-secure">Secure checkout via Gumroad</div>
+    </div>
+  </div>
+</div>
+
+<!-- CHANNELS -->
+<div class="section section-cream" id="channels">
+  <div class="section-head">
+    <span class="section-tag">YouTube</span>
+    <h2>Follow the journey</h2>
+    <p>Two channels. Two very different subjects. Both honest, both worth your time.</p>
+  </div>
+  <div class="card-grid col-2">
+    <div class="card">
+      <div class="card-icon ic-rose">❤️</div>
+      <div class="card-type">YouTube — new videos weekly</div>
+      <h3>JD84 Life</h3>
+      <p>Honest, unfiltered health content. Fatty liver recovery, diet, exercise, and the mental side of getting your life back on track. No filters, no pretending it's easy, no fads. Just real talk from someone going through it.</p>
+      <div><span class="badge badge-live">Active — weekly uploads</span></div>
+      <a href="#" class="card-btn cb-ghost">Watch on YouTube →</a>
+    </div>
+    <div class="card">
+      <div class="card-icon ic-amber">🔒</div>
+      <div class="card-type">YouTube — coming soon</div>
+      <h3>JD84 Safe</h3>
+      <p>Online safety for everyone — not just tech people. Simple, jargon-free guides on passwords, spotting scams, and staying safe online. Think: what you'd explain to someone who's never heard the word "phishing".</p>
+      <div><span class="badge badge-soon">Launching soon</span></div>
+      <a href="#" class="card-btn cb-ghost">Subscribe for updates →</a>
+    </div>
+  </div>
+</div>
+
+<!-- SUPPORT -->
+<div class="section section-white" id="support">
+  <div class="support-block">
+    <div>
+      <h2>Everything here is a one-person operation</h2>
+      <p>JD84 is built, written, filmed, coded, and shipped entirely by one person — alongside a full-time job. There's no team, no investors, no VC money.</p>
+      <p>Vault84 is free and will stay free. JD84 Life and JD84 Safe are free to watch. If any of it has helped you, the best thing you can do is share it — and if you want to do a little more, a coffee goes a long way.</p>
+      <p>Every penny goes back into the tools, hosting, and time that keeps this going.</p>
+    </div>
+    <div class="support-right">
+      <span class="big-coffee">☕</span>
+      <h3>Buy me a coffee</h3>
+      <p>No pressure. No subscription. Just a one-off way to say thanks if something here helped you.</p>
+      <a href="https://www.buymeacoffee.com" class="card-btn cb-coffee" style="max-width:220px;margin:0 auto;display:block;">Support JD84 ☕</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-left">
+    <a href="index.html" class="logo" style="text-decoration:none">
+      <div class="logo-ring" style="width:30px;height:30px">
+        <span class="n84" style="font-size:11px">84</span>
+        <span class="njd" style="font-size:7px">JD</span>
+      </div>
+      <span class="logo-wm" style="font-size:17px">JD84</span>
+    </a>
+    <p>jd84.co.uk · Built in Horsham, England</p>
+  </div>
+  <div class="footer-links">
+    <a href="#channels">YouTube</a>
+    <a href="vault84/privacy-policy.html">Privacy policy</a>
+    <a href="mailto:dev.jd84@gmail.com">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>

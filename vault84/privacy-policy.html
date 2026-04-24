@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vault84 — Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#2B7F6B;--teal-dk:#085041;--teal-lt:#E1F5EE;--teal-md:#9FE1CB;--coral:#B85C4A;--cream:#F5F2EC;--ink:#1C1C1A;--ink-md:#56564F;--ink-lt:#909088;--bdr:rgba(28,28,26,.10);--bdr-md:rgba(28,28,26,.18);--white:#fff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--bdr);padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-ring{width:38px;height:38px;border-radius:50%;border:2.5px solid var(--coral);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;flex-shrink:0}
+.logo-ring .n84{font-family:'DM Serif Display',serif;font-size:14px;color:var(--teal);line-height:1}
+.logo-ring .njd{font-size:8.5px;font-weight:500;color:var(--coral);letter-spacing:.3px;line-height:1}
+.logo-wm{font-family:'DM Serif Display',serif;font-size:21px;color:var(--ink);letter-spacing:-.3px}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{font-size:13.5px;color:var(--ink-md);text-decoration:none;transition:color .18s}
+.nav-links a:hover{color:var(--ink)}
+.content{max-width:700px;margin:0 auto;padding:64px 48px 96px}
+.content h1{font-family:'DM Serif Display',serif;font-size:40px;color:var(--ink);letter-spacing:-.8px;margin-bottom:8px}
+.content .meta{font-size:13px;color:var(--ink-lt);margin-bottom:48px;display:flex;gap:24px;flex-wrap:wrap}
+.content h2{font-family:'DM Serif Display',serif;font-size:22px;color:var(--ink);margin:36px 0 12px}
+.content p{font-size:15px;color:var(--ink-md);line-height:1.75;margin-bottom:14px}
+.content ul{padding-left:20px;margin-bottom:14px}
+.content ul li{font-size:15px;color:var(--ink-md);line-height:1.75;margin-bottom:6px}
+.highlight{background:var(--teal-lt);border-left:3px solid var(--teal);padding:16px 20px;border-radius:0 8px 8px 0;margin-bottom:24px}
+.highlight p{color:var(--teal-dk);margin:0;font-weight:500}
+footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px;display:flex;align-items:center;justify-content:space-between}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:12px;color:var(--ink-lt);text-decoration:none}
+.footer-links a:hover{color:var(--ink)}
+@media(max-width:740px){
+  nav{padding:0 20px}
+  .content{padding:40px 24px 72px}
+  footer{flex-direction:column;gap:14px;padding:24px 20px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">
+    <div class="logo-ring"><span class="n84">84</span><span class="njd">JD</span></div>
+    <span class="logo-wm">JD84</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">← Back to Vault84</a>
+    <a href="mailto:dev.jd84@gmail.com">Contact</a>
+  </div>
+</nav>
+
+<div class="content">
+  <h1>Vault84 Privacy Policy</h1>
+  <div class="meta">
+    <span>Last updated: March 2026</span>
+    <span>Applies to: Android</span>
+    <span>Contact: dev.jd84@gmail.com</span>
+  </div>
+
+  <div class="highlight">
+    <p>The short version: Vault84 collects no data whatsoever. Everything you enter stays on your device. There are no servers, no accounts, and no analytics.</p>
+  </div>
+
+  <h2>Overview</h2>
+  <p>Vault84 is a personal finance app built on a simple principle: your financial data belongs to you. We do not collect it, store it on servers, or share it with anyone. Everything stays on your device.</p>
+
+  <h2>What data does Vault84 collect?</h2>
+  <p>None. Vault84 does not collect any personal data. We have no servers, no accounts, no analytics, and no telemetry.</p>
+  <p>All data you enter — income, bills, savings, goals — is stored in a local SQLite database on your device only. It never leaves your phone.</p>
+
+  <h2>Does Vault84 share data with third parties?</h2>
+  <p>No. There are no third-party SDKs, advertising networks, or analytics platforms integrated into Vault84. There is nothing to share.</p>
+
+  <h2>Does Vault84 use the internet?</h2>
+  <p>No. Vault84 works entirely offline. It does not make any network requests. There is no internet permission in the app manifest.</p>
+
+  <h2>What permissions does Vault84 request?</h2>
+  <p>Vault84 requests only the permissions it genuinely needs:</p>
+  <ul>
+    <li><strong>Notifications</strong> — to send bill reminders if you choose to enable them. This is optional and can be disabled in Settings.</li>
+    <li><strong>Biometric authentication</strong> — to lock the app with your phone's existing Face ID, fingerprint, or PIN. This is optional.</li>
+    <li><strong>Boot completed</strong> — so scheduled bill reminders survive a phone restart.</li>
+  </ul>
+  <p>Vault84 explicitly blocks camera, microphone, location, contacts, calendar, and storage permissions. These are never requested under any circumstances.</p>
+
+  <h2>Backup and restore</h2>
+  <p>The backup feature allows you to export your database file and save it to a location of your choosing (such as Google Drive or local storage). This is entirely under your control. We do not receive, access, or store your backup files.</p>
+  <p>If you choose to store your backup on a cloud service, that service's own privacy policy applies to those files.</p>
+
+  <h2>Children's privacy</h2>
+  <p>Vault84 is intended for users aged 18 and over. We do not knowingly collect data from children. Since we collect no data from anyone, this requirement is satisfied by design.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If we ever change how Vault84 handles data in a meaningful way, we will update this document and note the change in the app's version history.</p>
+
+  <h2>Contact</h2>
+  <p>If you have any questions about this privacy policy, please contact us at <a href="mailto:dev.jd84@gmail.com" style="color:var(--teal)">dev.jd84@gmail.com</a></p>
+
+  <p style="margin-top:40px;font-size:13px;color:var(--ink-lt);border-top:1px solid var(--bdr);padding-top:24px">Vault84 is developed independently by a solo developer. It is not affiliated with any financial institution.</p>
+</div>
+
+<footer>
+  <p style="font-size:12px;color:var(--ink-lt)">© 2026 Vault84 · jd84.co.uk</p>
+  <div class="footer-links">
+    <a href="index.html">Vault84</a>
+    <a href="../index.html">JD84</a>
+    <a href="mailto:dev.jd84@gmail.com">dev.jd84@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
