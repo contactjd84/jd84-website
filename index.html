@@ -5,44 +5,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JD84 — Apps, Courses & Content</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--teal:#2B7F6B;--teal-dk:#085041;--teal-lt:#E1F5EE;--teal-md:#9FE1CB;--coral:#B85C4A;--coral-dk:#712B13;--coral-lt:#FAECE7;--cream:#F5F2EC;--ink:#1C1C1A;--ink-md:#56564F;--ink-lt:#909088;--bdr:rgba(28,28,26,.10);--bdr-md:rgba(28,28,26,.18);--white:#fff}
+:root{
+  --teal:#2f6b6b;
+  --teal-dk:#1a4242;
+  --teal-lt:#e4f0f0;
+  --teal-md:#8fc4c4;
+  --rust:#b36358;
+  --rust-dk:#7a3d34;
+  --rust-lt:#f5e8e6;
+  --cream:#f5f0e6;
+  --ink:#1c1c1a;
+  --ink-md:#56564f;
+  --ink-lt:#909088;
+  --bdr:rgba(28,28,26,.10);
+  --bdr-md:rgba(28,28,26,.18);
+  --white:#fff;
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--ink);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+
 /* NAV */
 nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--bdr);padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo-ring{width:38px;height:38px;border-radius:50%;border:2.5px solid var(--coral);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;flex-shrink:0}
-.logo-ring .n84{font-family:'DM Serif Display',serif;font-size:14px;color:var(--teal);line-height:1}
-.logo-ring .njd{font-size:8.5px;font-weight:500;color:var(--coral);letter-spacing:.3px;line-height:1}
-.logo-wm{font-family:'DM Serif Display',serif;font-size:21px;color:var(--ink);letter-spacing:-.3px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo img{height:40px;width:auto;display:block}
+.logo-text{font-family:'Alfa Slab One',serif;font-size:22px;color:var(--ink);letter-spacing:-.3px}
 .nav-links{display:flex;align-items:center;gap:28px}
-.nav-links a{font-size:13.5px;color:var(--ink-md);text-decoration:none;transition:color .18s}
+.nav-links a{font-size:13.5px;color:var(--ink-md);text-decoration:none;font-weight:500;transition:color .18s}
 .nav-links a:hover{color:var(--ink)}
-.nav-cta{background:var(--coral)!important;color:var(--white)!important;padding:9px 18px;border-radius:7px;font-weight:500!important;transition:opacity .18s!important}
+.nav-cta{background:var(--rust)!important;color:var(--white)!important;padding:9px 18px;border-radius:7px;font-weight:600!important;transition:opacity .18s!important}
 .nav-cta:hover{opacity:.85!important}
+
 /* HERO */
 .hero{background:var(--white);border-bottom:1px solid var(--bdr);padding:96px 48px 88px;text-align:center}
-.hero-pill{display:inline-block;font-size:11px;font-weight:500;letter-spacing:1.1px;text-transform:uppercase;color:var(--teal-dk);background:var(--teal-lt);border:1px solid var(--teal-md);padding:5px 16px;border-radius:999px;margin-bottom:28px}
-.hero h1{font-family:'DM Serif Display',serif;font-size:54px;line-height:1.1;letter-spacing:-1.2px;color:var(--ink);max-width:700px;margin:0 auto 20px}
-.hero h1 em{font-style:italic;color:var(--coral)}
+.hero-pill{display:inline-block;font-size:11px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;color:var(--teal-dk);background:var(--teal-lt);border:1px solid var(--teal-md);padding:5px 16px;border-radius:999px;margin-bottom:28px}
+.hero h1{font-family:'Alfa Slab One',serif;font-size:54px;line-height:1.1;letter-spacing:-1px;color:var(--ink);max-width:700px;margin:0 auto 20px;font-weight:400}
+.hero h1 em{font-style:italic;color:var(--rust)}
 .hero-sub{font-size:16px;color:var(--ink-md);max-width:460px;margin:0 auto 44px;line-height:1.7}
 .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn-fill{background:var(--coral);color:var(--white);padding:13px 28px;border-radius:7px;font-size:14px;font-weight:500;text-decoration:none;transition:opacity .18s;display:inline-block}
+.btn-fill{background:var(--rust);color:var(--white);padding:13px 28px;border-radius:7px;font-size:14px;font-weight:600;text-decoration:none;transition:opacity .18s;display:inline-block;font-family:'Montserrat',sans-serif}
 .btn-fill:hover{opacity:.86}
 .btn-fill.teal{background:var(--teal)}
-.btn-ghost{background:transparent;color:var(--ink);padding:13px 28px;border-radius:7px;font-size:14px;text-decoration:none;border:1px solid var(--bdr-md);transition:background .18s;display:inline-block}
+.btn-ghost{background:transparent;color:var(--ink);padding:13px 28px;border-radius:7px;font-size:14px;font-weight:500;text-decoration:none;border:1px solid var(--bdr-md);transition:background .18s;display:inline-block}
 .btn-ghost:hover{background:var(--cream)}
+
 /* SECTIONS */
 .section{padding:80px 48px}
 .section-white{background:var(--white)}
 .section-cream{background:var(--cream)}
 .section-head{text-align:center;margin-bottom:52px}
-.section-tag{display:block;font-size:10.5px;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-lt);margin-bottom:12px}
-.section-head h2{font-family:'DM Serif Display',serif;font-size:36px;letter-spacing:-.6px;color:var(--ink);margin-bottom:12px;line-height:1.15}
+.section-tag{display:block;font-size:10.5px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-lt);margin-bottom:12px}
+.section-head h2{font-family:'Alfa Slab One',serif;font-size:36px;letter-spacing:-.4px;color:var(--ink);margin-bottom:12px;line-height:1.15;font-weight:400}
 .section-head p{font-size:15px;color:var(--ink-md);max-width:420px;margin:0 auto}
+
 /* CARDS */
 .card-grid{max-width:980px;margin:0 auto;display:grid;gap:18px}
 .col-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
@@ -51,47 +68,50 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px 
 .card:hover{border-color:var(--bdr-md);transform:translateY(-2px)}
 .card-icon{width:46px;height:46px;border-radius:11px;margin-bottom:20px;display:flex;align-items:center;justify-content:center;font-size:22px}
 .ic-teal{background:var(--teal-lt)}
-.ic-coral{background:var(--coral-lt)}
-.ic-slate{background:#EEF1F6}
-.ic-amber{background:#FEF3E2}
-.ic-rose{background:#FDEDF0}
-.ic-coffee{background:#FDF6EE}
-.card-type{font-size:10.5px;font-weight:500;letter-spacing:.9px;text-transform:uppercase;color:var(--ink-lt);margin-bottom:6px}
-.card h3{font-family:'DM Serif Display',serif;font-size:21px;color:var(--ink);margin-bottom:10px;letter-spacing:-.2px}
+.ic-rust{background:var(--rust-lt)}
+.ic-slate{background:#eef1f6}
+.ic-amber{background:#fef3e2}
+.ic-rose{background:#fdedf0}
+.ic-coffee{background:#fdf6ee}
+.card-type{font-size:10.5px;font-weight:600;letter-spacing:.9px;text-transform:uppercase;color:var(--ink-lt);margin-bottom:6px}
+.card h3{font-family:'Alfa Slab One',serif;font-size:21px;color:var(--ink);margin-bottom:10px;letter-spacing:-.1px;font-weight:400}
 .card p{font-size:13.5px;color:var(--ink-md);line-height:1.65;margin-bottom:20px}
-.badge{display:inline-block;font-size:11px;font-weight:500;padding:4px 12px;border-radius:999px;margin-bottom:20px}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 12px;border-radius:999px;margin-bottom:20px}
 .badge-free{background:var(--teal-lt);color:var(--teal-dk)}
-.badge-paid{background:var(--coral-lt);color:var(--coral-dk)}
-.badge-soon{background:#EEF1F6;color:#445566}
-.badge-live{background:#FEF3E2;color:#7A5000}
-.badge-coffee{background:#FDF6EE;color:#7A4500}
-.card-btn{display:block;text-align:center;padding:10px 0;border-radius:7px;font-size:13.5px;font-weight:500;text-decoration:none;transition:opacity .18s}
+.badge-paid{background:var(--rust-lt);color:var(--rust-dk)}
+.badge-soon{background:#eef1f6;color:#445566}
+.badge-live{background:#fef3e2;color:#7a5000}
+.badge-coffee{background:#fdf6ee;color:#7a4500}
+.card-btn{display:block;text-align:center;padding:10px 0;border-radius:7px;font-size:13.5px;font-weight:600;text-decoration:none;transition:opacity .18s;font-family:'Montserrat',sans-serif}
 .card-btn:hover{opacity:.82}
 .cb-teal{background:var(--teal);color:var(--white)}
-.cb-coral{background:var(--coral);color:var(--white)}
-.cb-coffee{background:#D97A2B;color:var(--white)}
+.cb-rust{background:var(--rust);color:var(--white)}
+.cb-coffee{background:#d97a2b;color:var(--white)}
 .cb-ghost{border:1px solid var(--bdr-md);color:var(--ink-md)}
+
 /* ACADEMY FEATURE */
 .academy-feature{max-width:980px;margin:0 auto;background:var(--white);border:1px solid var(--bdr);border-radius:14px;display:grid;grid-template-columns:1fr auto;overflow:hidden}
 .af-left{padding:40px}
-.af-left h3{font-family:'DM Serif Display',serif;font-size:26px;letter-spacing:-.4px;color:var(--ink);margin-bottom:12px}
+.af-left h3{font-family:'Alfa Slab One',serif;font-size:26px;letter-spacing:-.3px;color:var(--ink);margin-bottom:12px;font-weight:400}
 .af-left p{font-size:14px;color:var(--ink-md);line-height:1.7;margin-bottom:24px;max-width:480px}
 .af-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
-.af-pill{font-size:12px;padding:5px 13px;border-radius:999px;border:1px solid var(--bdr-md);color:var(--ink-md)}
+.af-pill{font-size:12px;font-weight:500;padding:5px 13px;border-radius:999px;border:1px solid var(--bdr-md);color:var(--ink-md)}
 .af-right{background:var(--ink);padding:40px 36px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:200px;text-align:center}
-.af-price{font-family:'DM Serif Display',serif;font-size:52px;color:var(--white);line-height:1;margin-bottom:4px}
+.af-price{font-family:'Alfa Slab One',serif;font-size:52px;color:var(--white);line-height:1;margin-bottom:4px;font-weight:400}
 .af-note{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:24px}
-.af-enrol{display:block;background:var(--coral);color:var(--white);padding:13px 28px;border-radius:7px;font-size:14px;font-weight:500;text-decoration:none;transition:opacity .18s;width:100%;text-align:center}
+.af-enrol{display:block;background:var(--rust);color:var(--white);padding:13px 28px;border-radius:7px;font-size:14px;font-weight:600;text-decoration:none;transition:opacity .18s;width:100%;text-align:center;font-family:'Montserrat',sans-serif}
 .af-enrol:hover{opacity:.86}
 .af-secure{font-size:11px;color:rgba(255,255,255,.25);margin-top:10px}
+
 /* SUPPORT */
 .support-block{max-width:980px;margin:0 auto;background:var(--white);border:1px solid var(--bdr);border-radius:14px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.support-block h2{font-family:'DM Serif Display',serif;font-size:30px;letter-spacing:-.5px;color:var(--ink);margin-bottom:14px;line-height:1.2}
+.support-block h2{font-family:'Alfa Slab One',serif;font-size:30px;letter-spacing:-.3px;color:var(--ink);margin-bottom:14px;line-height:1.2;font-weight:400}
 .support-block > div p{font-size:14px;color:var(--ink-md);line-height:1.7;margin-bottom:12px}
 .support-right{background:var(--cream);border-radius:12px;padding:32px 28px;text-align:center;border:1px solid var(--bdr)}
 .support-right .big-coffee{font-size:40px;margin-bottom:14px;display:block}
-.support-right h3{font-family:'DM Serif Display',serif;font-size:20px;color:var(--ink);margin-bottom:8px}
+.support-right h3{font-family:'Alfa Slab One',serif;font-size:20px;color:var(--ink);margin-bottom:8px;font-weight:400}
 .support-right p{font-size:13px;color:var(--ink-md);margin-bottom:20px;line-height:1.6}
+
 /* FOOTER */
 footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px;display:flex;align-items:center;justify-content:space-between}
 .footer-left{display:flex;align-items:center;gap:20px}
@@ -99,12 +119,14 @@ footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px
 .footer-links{display:flex;gap:24px}
 .footer-links a{font-size:12px;color:var(--ink-lt);text-decoration:none;transition:color .18s}
 .footer-links a:hover{color:var(--ink)}
+
 /* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .hero-pill{animation:fadeUp .4s ease both}
 .hero h1{animation:fadeUp .4s .08s ease both}
 .hero-sub{animation:fadeUp .4s .16s ease both}
 .hero-btns{animation:fadeUp .4s .24s ease both}
+
 /* RESPONSIVE */
 @media(max-width:740px){
   nav{padding:0 20px}
@@ -123,8 +145,10 @@ footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px
 
 <nav>
   <a href="index.html" class="logo">
-    <div class="logo-ring"><span class="n84">84</span><span class="njd">JD</span></div>
-    <span class="logo-wm">JD84</span>
+    <!-- Wordmark: place your horizontal JD84 banner image here -->
+    <!-- <img src="assets/jd84-wordmark.png" alt="JD84"> -->
+    <!-- Fallback text logo until image is added -->
+    <span class="logo-text" style="color:var(--rust)">JD</span><span class="logo-text" style="color:var(--teal)">84</span>
   </a>
   <div class="nav-links">
     <a href="#apps">Apps</a>
@@ -251,13 +275,9 @@ footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px
 <footer>
   <div class="footer-left">
     <a href="index.html" class="logo" style="text-decoration:none">
-      <div class="logo-ring" style="width:30px;height:30px">
-        <span class="n84" style="font-size:11px">84</span>
-        <span class="njd" style="font-size:7px">JD</span>
-      </div>
-      <span class="logo-wm" style="font-size:17px">JD84</span>
+      <span class="logo-text" style="font-size:17px;color:var(--rust)">JD</span><span class="logo-text" style="font-size:17px;color:var(--teal)">84</span>
     </a>
-    <p>jd84.co.uk · Built in Horsham, England</p>
+    <p>jd84.org · Built in Horsham, England</p>
   </div>
   <div class="footer-links">
     <a href="#channels">YouTube</a>
