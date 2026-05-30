@@ -35,7 +35,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px 
 .nav-links{display:flex;align-items:center;gap:28px}
 .nav-links a{font-size:13.5px;color:var(--ink-md);text-decoration:none;font-weight:500;transition:color .18s}
 .nav-links a:hover{color:var(--ink)}
-.nav-cta{background:var(--rust)!important;color:var(--white)!important;padding:9px 18px;border-radius:7px;font-weight:600!important;transition:opacity .18s!important}
+.nav-cta{background:var(--rust)!important;color:var(--white)!important;padding:9px 18px;border-radius:7px;font-weight:600!important;transition:opacity .18s!important;white-space:nowrap}
 .nav-cta:hover{opacity:.85!important}
 
 /* HERO */
@@ -114,7 +114,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px 
 .about-text p{font-size:14px;color:var(--ink-md);line-height:1.7;margin-bottom:10px}
 .about-text p:last-child{margin-bottom:0}
 
-/* ISC2 NOTE */
+/* INFO NOTE */
 .info-note{background:var(--teal-lt);border:1px solid var(--teal-md);border-radius:12px;padding:20px 24px;margin-top:18px;font-size:13.5px;color:var(--teal-dk);line-height:1.6}
 .info-note strong{display:block;margin-bottom:4px;font-size:14px;font-weight:600}
 
@@ -155,19 +155,19 @@ footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px
     <img src="../assets/jd84_banner_websiteheader.png" alt="JD84">
   </a>
   <div class="nav-links">
-    <a href="../index.html">← All projects</a>
+    <a href="../index.html">Home</a>
     <a href="#courses">Courses</a>
     <a href="#how-it-works">How it works</a>
     <a href="#about">About</a>
-    <a href="#courses" class="nav-cta">Enrol — £84</a>
+    <a href="#courses" class="nav-cta">Enrol for £84</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-pill">Online courses · Taught by people who know their stuff</div>
+  <div class="hero-pill">Online courses - taught by people who know their stuff</div>
   <h1>Proper courses at a <em>ridiculous</em> price</h1>
-  <p class="hero-sub">Academy84 is a course platform with one rule: every course has to offer more depth, more value, and more care than anything else available at the price. No fluff. No filler. No excuses.</p>
+  <p class="hero-sub">Academy84 is a course platform built around one idea: every course should offer more depth, more content, and more care than anything else at the price. No fluff. No filler.</p>
   <div class="hero-btns">
     <a href="#courses" class="btn-fill">See the courses</a>
     <a href="#about" class="btn-ghost">About Academy84</a>
@@ -178,7 +178,7 @@ footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px
 <div class="trust-bar">
   <div class="trust-item"><span>🎓</span> Taught by practitioners, not content farms</div>
   <div class="trust-item"><span>📦</span> More content than you'd expect at this price</div>
-  <div class="trust-item"><span>♾️</span> Self-paced · lifetime access</div>
+  <div class="trust-item"><span>♾️</span> Self-paced - lifetime access</div>
   <div class="trust-item"><span>🚫</span> No subscriptions. No upsells. Ever.</div>
 </div>
 
@@ -187,29 +187,29 @@ footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px
   <div class="inner">
     <div class="section-head">
       <span class="section-tag">The platform</span>
-      <h2>The rule is simple: more value than anyone else</h2>
-      <p>Every course on Academy84 has to clear the same bar — more depth, more care, and more content than anything else at the price.</p>
+      <h2>More value than anyone else - that's the only rule</h2>
+      <p>Every course on Academy84 has to clear the same bar: more depth, more care, and more content than anything else at the price.</p>
     </div>
     <div class="values-grid">
       <div class="value-card">
         <span class="value-icon">🧠</span>
         <h3>Taught by people who actually do this</h3>
-        <p>Not outsourced to a freelancer who read the same Wikipedia article you could. Every instructor on Academy84 works in their field. The knowledge is real.</p>
+        <p>Every instructor works in their field. The cybersecurity course is taught by a practising cybersecurity engineer who delivers the same material in a professional classroom. The knowledge is real.</p>
       </div>
       <div class="value-card">
         <span class="value-icon">📦</span>
         <h3>Depth over decoration</h3>
-        <p>No padding, no filler videos, no 30-second modules dressed up as content. If it doesn't add something, it doesn't make the cut.</p>
+        <p>No padding, no filler videos, no 30-second modules dressed up as content. If it doesn't add something useful, it doesn't go in.</p>
       </div>
       <div class="value-card">
         <span class="value-icon">💷</span>
-        <h3>Price that makes you do a double take</h3>
-        <p>48-module courses for £84. Lifetime access. No subscription. The value is the point — not a loss-leader for something more expensive.</p>
+        <h3>A price that makes you look twice</h3>
+        <p>48-module courses for £84. Lifetime access. No subscription. The value is the whole point - not a teaser for something more expensive.</p>
       </div>
       <div class="value-card">
         <span class="value-icon">🎯</span>
         <h3>Honest about who it's for</h3>
-        <p>Every course is clear about what you need coming in. No overselling. If a course assumes prior knowledge, it says so upfront.</p>
+        <p>Every course is upfront about what you need coming in. No overselling. If a course assumes prior knowledge, it says so clearly.</p>
       </div>
     </div>
   </div>
@@ -228,27 +228,27 @@ footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px
       <div class="cc-left">
         <span class="cc-badge">Available now</span>
         <h3>Introduction to Cybersecurity</h3>
-        <p class="cc-desc">A structured 12-unit course covering the core concepts, terminology, and frameworks that underpin IT security. Built around the ISC2 CC exam domains and taught through real UK case studies, interactive activities, and business-first thinking.</p>
-        <p class="cc-desc">This is the course for IT professionals — networking, infrastructure, systems administration, support — who want to properly understand security. Not a skim. A real grounding in how security works and why the decisions get made the way they do.</p>
+        <p class="cc-desc">A 12-unit course covering the core concepts, terminology, and frameworks that underpin IT security. Built around the ISC2 CC exam domains and taught through real UK case studies, interactive activities, and business-first thinking.</p>
+        <p class="cc-desc">This is the course for IT professionals - networking, infrastructure, systems administration, support - who want to properly understand security. Not a skim. A real grounding in how security works and why decisions get made the way they do.</p>
 
         <div class="cc-prereq">
           <strong>Who this is for</strong>
-          This course assumes you already work in IT and are comfortable with the basics — what a network is, how servers work, what DNS does. It's not designed for people with no IT background. If you work in or around IT and want to understand the security side of it, this is for you.
+          This course assumes you already work in IT and are comfortable with the basics - what a network is, how servers work, what DNS does. It is not aimed at people with no IT background at all. If you work in or around IT and want to properly understand the security side of it, this is for you.
         </div>
 
         <div class="cc-pills">
-          <span class="cc-pill">12 units · 48 modules</span>
+          <span class="cc-pill">12 units - 48 modules</span>
           <span class="cc-pill">ISC2 CC aligned</span>
           <span class="cc-pill">UK case studies</span>
-          <span class="cc-pill">GDPR &amp; NCSC framing</span>
+          <span class="cc-pill">GDPR and NCSC framing</span>
           <span class="cc-pill">Interactive activities</span>
           <span class="cc-pill">End-of-module quizzes</span>
         </div>
-        <a href="#" class="btn-fill">Enrol now — £84</a>
+        <a href="#" class="btn-fill">Enrol now for £84</a>
       </div>
       <div class="cc-right">
         <div class="cc-price">£84</div>
-        <div class="cc-note">one-off · self-paced · lifetime access</div>
+        <div class="cc-note">one-off payment - lifetime access</div>
         <a href="#" class="cc-enrol">Enrol now</a>
         <div class="cc-secure">Secure checkout via Gumroad</div>
         <div class="cc-module-count">
@@ -260,7 +260,7 @@ footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px
 
     <div class="info-note">
       <strong>A note on certification</strong>
-      This course is aligned to the ISC2 Certified in Cybersecurity (CC) exam domains and will give you a solid foundation if you choose to pursue it. But it's not a dedicated exam prep product — it's a proper introduction to the subject. Think of the cert as something to aim for once the knowledge is there.
+      This course is aligned to the ISC2 Certified in Cybersecurity (CC) exam domains and will give you a solid foundation if you choose to pursue it. But it is not a dedicated exam prep product - it is a proper introduction to the subject. Think of the cert as something to aim for once the knowledge is there.
     </div>
   </div>
 </div>
@@ -277,22 +277,22 @@ footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px
       <div class="step">
         <span class="step-num">1</span>
         <h3>Watch the intro video</h3>
-        <p>5–8 minutes. The concept introduced clearly, grounded in a real-world scenario. No reading from slides, no padding.</p>
+        <p>5 to 8 minutes. The concept introduced clearly and grounded in a real-world scenario. No reading from slides, no padding.</p>
       </div>
       <div class="step">
         <span class="step-num">2</span>
         <h3>Try the activity</h3>
-        <p>An interactive exercise that makes you apply what you just heard. Not multiple choice trivia — actual thinking required.</p>
+        <p>An interactive exercise that makes you apply what you just heard. Not multiple choice trivia - actual thinking required.</p>
       </div>
       <div class="step">
         <span class="step-num">3</span>
         <h3>Go deeper</h3>
-        <p>A second video covering the detail, the nuances, and the edge cases that make the difference between knowing a term and understanding a concept.</p>
+        <p>A second video covering the detail, the nuances, and the edge cases. The difference between knowing a term and actually understanding a concept.</p>
       </div>
       <div class="step">
         <span class="step-num">4</span>
         <h3>Test yourself</h3>
-        <p>A short quiz covering terminology, concepts, and scenario judgement. The three things you actually need to have absorbed.</p>
+        <p>A short quiz covering terminology, concepts, and scenario judgement - the three things you need to have actually absorbed.</p>
       </div>
     </div>
   </div>
@@ -302,14 +302,14 @@ footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px
 <div class="section section-cream">
   <div class="inner">
     <div class="section-head">
-      <span class="section-tag">Curriculum — Introduction to Cybersecurity</span>
+      <span class="section-tag">Curriculum - Introduction to Cybersecurity</span>
       <h2>12 units. 48 modules. Everything covered.</h2>
-      <p>Each unit builds on the last. By unit 12 you'll have a complete picture of how security works — and why it matters in a business context.</p>
+      <p>Each unit builds on the last. By unit 12 you will have a complete picture of how security works and why it matters in a business context.</p>
     </div>
     <div class="learn-grid">
       <div class="learn-item"><span class="learn-num">1</span><div class="learn-text"><h4>Cybersecurity Fundamentals</h4><p>CIA Triad, AAA, threat actors, risk mechanics, least privilege, Zero Trust</p></div></div>
       <div class="learn-item"><span class="learn-num">2</span><div class="learn-text"><h4>Networking Fundamentals</h4><p>OSI model, TCP/IP, ports and DNS, switches vs routers, firewalls</p></div></div>
-      <div class="learn-item"><span class="learn-num">3</span><div class="learn-text"><h4>Principles and Concepts</h4><p>Security as business insurance, control types — preventive, detective, corrective, deterrent</p></div></div>
+      <div class="learn-item"><span class="learn-num">3</span><div class="learn-text"><h4>Principles and Concepts</h4><p>Security as business insurance, control types - preventive, detective, corrective, deterrent</p></div></div>
       <div class="learn-item"><span class="learn-num">4</span><div class="learn-text"><h4>Threats and Vulnerabilities</h4><p>Zero-days, malware types, social engineering, OWASP Top 10, SQL injection</p></div></div>
       <div class="learn-item"><span class="learn-num">5</span><div class="learn-text"><h4>Identity and Access</h4><p>Zero Trust, MFA factors, JML lifecycle, privilege creep, MAC/RBAC/ABAC/DAC</p></div></div>
       <div class="learn-item"><span class="learn-num">6</span><div class="learn-text"><h4>Security Operations</h4><p>SOC, SIEM, alert fatigue, incident response lifecycle</p></div></div>
@@ -329,16 +329,16 @@ footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px
     <div class="section-head">
       <span class="section-tag">About</span>
       <h2>Built by one person with a simple standard</h2>
-      <p>If it isn't genuinely better value than the competition, it doesn't go on the platform.</p>
+      <p>If it is not genuinely better value than the competition, it does not go on the platform.</p>
     </div>
     <div class="about-block">
       <div class="about-avatar">👨‍💻</div>
       <div class="about-text">
         <h3>JD</h3>
         <span class="about-role">Academy84</span>
-        <p>I built Academy84 because I kept looking at the price of online courses and thinking the same thing: you can charge less and still do more. A 48-module cybersecurity course with interactive activities and proper UK case studies for £84 isn't a loss-leader. It's just what the course should cost.</p>
-        <p>The cybersecurity course comes from my day job — I'm a cybersecurity engineer and I deliver this material in a professional classroom setting. The content has been road-tested with real people. But Academy84 isn't limited to one subject. More courses are in development across different areas, all built to the same standard: taught by someone who actually knows what they're talking about, more content than you'd expect, priced so the decision is easy.</p>
-        <p>I also built Vault84 (a free Android finance app) and run the JD84 Life YouTube channel. Everything under the JD84 name follows the same logic — more value than you'd expect, no nonsense, built properly.</p>
+        <p>I built Academy84 because I kept looking at online course prices and thinking the same thing: you can charge less and still do more. A 48-module cybersecurity course with interactive activities and proper UK case studies for £84 is not a loss-leader. It is just what the course should cost.</p>
+        <p>The cybersecurity course comes from my day job. I am a cybersecurity engineer and I deliver this material in a professional classroom. The content has been tested with real people. But Academy84 is not limited to one subject - more courses are in development across different areas, all built to the same standard. Taught by someone who knows what they are talking about, more content than you would expect, priced so the decision is easy.</p>
+        <p>I also built Vault84 (a free Android finance app) and run the JD84 Life YouTube channel. Everything under the JD84 name follows the same idea - more value than you would expect, no nonsense, built properly.</p>
       </div>
     </div>
   </div>
@@ -353,7 +353,7 @@ footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px
   </div>
   <div class="footer-links">
     <a href="mailto:contact.jd84@gmail.com">Contact</a>
-    <a href="../index.html">← Back to JD84</a>
+    <a href="../index.html">Home</a>
   </div>
 </footer>
 

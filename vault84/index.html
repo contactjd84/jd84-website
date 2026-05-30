@@ -37,12 +37,8 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px 
 .nav-links{display:flex;align-items:center;gap:28px}
 .nav-links a{font-size:13.5px;color:var(--ink-md);text-decoration:none;transition:color .18s}
 .nav-links a:hover{color:var(--ink)}
-.nav-cta{background:var(--teal)!important;color:var(--white)!important;padding:9px 18px;border-radius:7px;font-weight:500!important;transition:opacity .18s!important}
+.nav-cta{background:var(--teal)!important;color:var(--white)!important;padding:9px 18px;border-radius:7px;font-weight:500!important;transition:opacity .18s!important;white-space:nowrap}
 .nav-cta:hover{opacity:.85!important}
-
-/* BETA BANNER */
-.beta-banner{background:var(--teal-dk);color:var(--white);text-align:center;padding:10px 24px;font-size:13px;line-height:1.5}
-.beta-banner a{color:var(--teal-md);text-decoration:underline}
 
 /* HERO */
 .hero-wrap{background:var(--white);border-bottom:1px solid var(--bdr)}
@@ -56,10 +52,6 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px 
 .btn-fill:hover{opacity:.86}
 .btn-ghost{background:transparent;color:var(--ink);padding:13px 28px;border-radius:7px;font-size:14px;text-decoration:none;border:1px solid var(--bdr-md);transition:background .18s;display:inline-block}
 .btn-ghost:hover{background:var(--cream)}
-
-/* BETA EXPLAINER */
-.beta-explainer{background:var(--rust-lt);border:1px solid rgba(179,99,88,.2);border-radius:12px;padding:20px 24px;margin-top:24px;font-size:13.5px;color:var(--rust-dk);line-height:1.6}
-.beta-explainer strong{display:block;margin-bottom:4px;font-size:14px}
 
 /* PHONE MOCKUP */
 .hero-visual{display:flex;justify-content:center;align-items:center}
@@ -75,7 +67,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px 
 .section-head h2{font-family:'Playfair Display',serif;font-size:34px;letter-spacing:-.3px;color:var(--ink);margin-bottom:12px}
 .section-head p{font-size:15px;color:var(--ink-md);max-width:420px;margin:0 auto}
 
-/* HOW BETA WORKS */
+/* HOW IT WORKS */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
 .step{background:var(--cream);border:1px solid var(--bdr);border-radius:14px;padding:24px 22px}
 .step-num{font-family:'Playfair Display',serif;font-size:36px;color:var(--teal-md);line-height:1;margin-bottom:12px;display:block}
@@ -139,23 +131,17 @@ footer{background:var(--cream);border-top:1px solid var(--bdr);padding:28px 48px
 </head>
 <body>
 
-<!-- BETA BANNER -->
-<div class="beta-banner">
-  Vault84 is currently in closed beta. <a href="https://groups.google.com/g/vault84-alpha-testers">Join the tester group</a> to get early access.
-</div>
-
 <nav>
   <a href="../index.html" class="logo">
     <img src="../assets/vault84_logo.png" alt="Vault84 logo">
     <span class="logo-wm">Vault84</span>
   </a>
   <div class="nav-links">
-    <a href="../index.html">← All projects</a>
+    <a href="../index.html">Home</a>
     <a href="#features">Features</a>
     <a href="#privacy">Privacy</a>
-    <a href="#beta">Join the beta</a>
     <a href="#support">Support</a>
-    <a href="https://groups.google.com/g/vault84-alpha-testers" class="nav-cta">Join beta</a>
+    <a href="https://play.google.com/store/apps/details?id=com.jd84.vault84" class="nav-cta">Download free</a>
   </div>
 </nav>
 
@@ -163,16 +149,12 @@ footer{background:var(--cream);border-top:1px solid var(--bdr);padding:28px 48px
 <div class="hero-wrap">
   <div class="hero">
     <div class="hero-text">
-      <div class="hero-pill">Android app · Closed beta · 100% free</div>
+      <div class="hero-pill">Android app - free - no ads - no data</div>
       <h1>The private, offline, <em>zero-clutter</em> money manager</h1>
-      <p class="hero-sub">Vault84 is built by a solo developer to be simple, secure, and completely free of ads. No data mining. No subscription fees. Just a clean app that helps you take control of your budget.</p>
+      <p class="hero-sub">Vault84 is a free Android app built by one person to be simple, secure, and completely free of ads. No data mining. No subscription fees. Just a clean app that helps you take control of your budget.</p>
       <div class="hero-btns">
-        <a href="https://groups.google.com/g/vault84-alpha-testers" class="btn-fill">Join the beta</a>
+        <a href="https://play.google.com/store/apps/details?id=com.jd84.vault84" class="btn-fill">Download on Google Play</a>
         <a href="#support" class="btn-ghost">Buy me a coffee ☕</a>
-      </div>
-      <div class="beta-explainer">
-        <strong>Currently in closed beta</strong>
-        Vault84 isn't publicly available yet. Join the tester group and you'll get access to install it directly from Google Play. Your feedback helps shape the final release.
       </div>
     </div>
     <div class="hero-visual">
@@ -183,39 +165,8 @@ footer{background:var(--cream);border-top:1px solid var(--bdr);padding:28px 48px
   </div>
 </div>
 
-<!-- HOW THE BETA WORKS -->
-<div class="section section-full" id="beta">
-  <div class="inner">
-    <div class="section-head">
-      <span class="section-tag">Beta access</span>
-      <h2>How to get early access</h2>
-      <p>Three steps. Takes about two minutes.</p>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <span class="step-num">1</span>
-        <h3>Join the tester group</h3>
-        <p>Click the button below to join the Vault84 beta group on Google Groups. All you need is a Google account.</p>
-      </div>
-      <div class="step">
-        <span class="step-num">2</span>
-        <h3>Accept the Play Store invite</h3>
-        <p>Once you're in the group, use the link in the group description to opt in to the beta on Google Play.</p>
-      </div>
-      <div class="step">
-        <span class="step-num">3</span>
-        <h3>Install and explore</h3>
-        <p>Download Vault84 from Google Play and start using it. If you spot anything odd, drop feedback in the group.</p>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:36px">
-      <a href="https://groups.google.com/g/vault84-alpha-testers" class="btn-fill">Join the beta group</a>
-    </div>
-  </div>
-</div>
-
 <!-- FEATURES -->
-<div class="section section-cream" id="features">
+<div class="section section-full" id="features">
   <div class="inner">
     <div class="section-head">
       <span class="section-tag">Features</span>
@@ -226,7 +177,7 @@ footer{background:var(--cream);border-top:1px solid var(--bdr);padding:28px 48px
       <div class="feat">
         <span class="feat-icon">🔒</span>
         <h3>Completely offline</h3>
-        <p>Vault84 makes zero network requests. Your data never leaves your phone. There's no internet permission in the app manifest.</p>
+        <p>Vault84 makes zero network requests. Your data never leaves your phone. There is no internet permission in the app manifest.</p>
       </div>
       <div class="feat">
         <span class="feat-icon">💰</span>
@@ -236,7 +187,7 @@ footer{background:var(--cream);border-top:1px solid var(--bdr);padding:28px 48px
       <div class="feat">
         <span class="feat-icon">🔔</span>
         <h3>Bill reminders</h3>
-        <p>Optional notifications so bills never catch you off guard. Set it up once, forget about it - until you need it.</p>
+        <p>Optional notifications so bills never catch you off guard. Set it up once and forget about it until you need it.</p>
       </div>
       <div class="feat">
         <span class="feat-icon">👆</span>
@@ -246,24 +197,24 @@ footer{background:var(--cream);border-top:1px solid var(--bdr);padding:28px 48px
       <div class="feat">
         <span class="feat-icon">💾</span>
         <h3>Backup and restore</h3>
-        <p>Export your data to anywhere you choose - Google Drive, local storage, wherever. We never see your backup files.</p>
+        <p>Export your data to wherever you choose - Google Drive, local storage, anywhere. We never see your backup files.</p>
       </div>
       <div class="feat">
         <span class="feat-icon">🚫</span>
         <h3>Zero ads, ever</h3>
-        <p>No advertising networks, no analytics SDKs, no third-party tracking of any kind. Vault84 is built to serve you, not sell you.</p>
+        <p>No advertising networks, no analytics SDKs, no third-party tracking. Vault84 is built to serve you, not sell you.</p>
       </div>
     </div>
   </div>
 </div>
 
 <!-- PRIVACY -->
-<div class="section section-full" id="privacy">
+<div class="section section-cream" id="privacy">
   <div class="inner">
     <div class="section-head">
       <span class="section-tag">Privacy</span>
       <h2>Your data. Your phone. Full stop.</h2>
-      <p>Here's exactly what Vault84 does and doesn't do with your information.</p>
+      <p>Here is exactly what Vault84 does and does not do with your information.</p>
     </div>
     <div class="perm-grid">
       <div class="perm">
@@ -310,22 +261,22 @@ footer{background:var(--cream);border-top:1px solid var(--bdr);padding:28px 48px
       </div>
     </div>
     <p style="text-align:center;margin-top:28px;font-size:13px;color:var(--ink-lt)">
-      <a href="privacy-policy.html" style="color:var(--teal);text-decoration:none">Read the full privacy policy →</a>
+      <a href="privacy-policy.html" style="color:var(--teal);text-decoration:none">Read the full privacy policy</a>
     </p>
   </div>
 </div>
 
 <!-- BUY ME A COFFEE -->
-<div class="section section-cream" id="support">
+<div class="section section-full" id="support">
   <div class="coffee-block">
     <div>
       <h2>Vault84 is free. A coffee keeps it that way.</h2>
-      <p>If Vault84 has helped you stop over-tracking and finally take control of your budget, consider buying me a coffee to help keep the updates coming. No subscription, no pressure - just a one-off way to say thanks from one real person to another.</p>
+      <p>If Vault84 has helped you take control of your budget, consider buying me a coffee to help keep the updates coming. No subscription, no pressure - just a one-off way to say thanks from one real person to another.</p>
     </div>
     <div class="coffee-right">
       <span class="coffee-emoji">☕</span>
       <a href="https://ko-fi.com/jd84uk" class="coffee-btn">Buy me a coffee</a>
-      <div class="coffee-sub">Pay what you want · No account needed</div>
+      <div class="coffee-sub">Pay what you want - no account needed</div>
     </div>
   </div>
 </div>
@@ -333,15 +284,15 @@ footer{background:var(--cream);border-top:1px solid var(--bdr);padding:28px 48px
 <footer>
   <div class="footer-left">
     <a href="../index.html" class="logo" style="text-decoration:none">
-     <img src="../assets/vault84_logo.png" alt="Vault84 logo" style="height:28px;width:28px;object-fit:contain;border-radius:50%;border:2px solid #b36358;padding:2px">
+      <img src="../assets/vault84_logo.png" alt="Vault84 logo" style="height:28px;width:28px;object-fit:contain;border-radius:50%;border:2px solid #b36358;padding:2px">
       <span class="logo-wm" style="font-size:17px">Vault84</span>
     </a>
     <p>jd84.org/vault84</p>
   </div>
   <div class="footer-links">
     <a href="privacy-policy.html">Privacy policy</a>
-    <a href="mailto:dev.jd84@gmail.com">Support</a>
-    <a href="../index.html">← Back to JD84</a>
+    <a href="mailto:jd84.dev@gmail.com">Support</a>
+    <a href="../index.html">Home</a>
   </div>
 </footer>
 
