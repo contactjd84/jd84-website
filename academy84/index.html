@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academy84 — Proper Courses. Ridiculous Value.</title>
+<link rel="icon" href="../assets/jd84_logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#2f6b6b;
+  --teal-dk:#1a4242;
+  --teal-lt:#e4f0f0;
+  --teal-md:#8fc4c4;
+  --rust:#b36358;
+  --rust-dk:#7a3d34;
+  --rust-lt:#f5e8e6;
+  --cream:#f5f0e6;
+  --ink:#1c1c1a;
+  --ink-md:#56564f;
+  --ink-lt:#909088;
+  --bdr:rgba(28,28,26,.10);
+  --bdr-md:rgba(28,28,26,.18);
+  --white:#fff;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--ink);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--bdr);padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo img{height:40px;width:auto;display:block}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:13.5px;color:var(--ink-md);text-decoration:none;font-weight:500;transition:color .18s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--rust)!important;color:var(--white)!important;padding:9px 18px;border-radius:7px;font-weight:600!important;transition:opacity .18s!important}
+.nav-cta:hover{opacity:.85!important}
+
+/* HERO */
+.hero{background:var(--white);border-bottom:1px solid var(--bdr);padding:96px 48px 88px;text-align:center}
+.hero-pill{display:inline-block;font-size:11px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;color:var(--teal-dk);background:var(--teal-lt);border:1px solid var(--teal-md);padding:5px 16px;border-radius:999px;margin-bottom:28px}
+.hero h1{font-family:'Alfa Slab One',serif;font-size:50px;line-height:1.1;letter-spacing:-1px;color:var(--ink);max-width:700px;margin:0 auto 20px;font-weight:400}
+.hero h1 em{font-style:italic;color:var(--rust)}
+.hero-sub{font-size:16px;color:var(--ink-md);max-width:520px;margin:0 auto 44px;line-height:1.7}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-fill{background:var(--rust);color:var(--white);padding:13px 28px;border-radius:7px;font-size:14px;font-weight:600;text-decoration:none;transition:opacity .18s;display:inline-block;font-family:'Montserrat',sans-serif}
+.btn-fill:hover{opacity:.86}
+.btn-ghost{background:transparent;color:var(--ink);padding:13px 28px;border-radius:7px;font-size:14px;font-weight:500;text-decoration:none;border:1px solid var(--bdr-md);transition:background .18s;display:inline-block}
+.btn-ghost:hover{background:var(--cream)}
+
+/* TRUST BAR */
+.trust-bar{background:var(--teal-dk);padding:16px 48px;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.85);font-size:13px;font-weight:500}
+.trust-item span{font-size:16px}
+
+/* SECTIONS */
+.section{padding:80px 48px}
+.section-white{background:var(--white)}
+.section-cream{background:var(--cream)}
+.inner{max-width:980px;margin:0 auto}
+.section-head{text-align:center;margin-bottom:52px}
+.section-tag{display:block;font-size:10.5px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-lt);margin-bottom:12px}
+.section-head h2{font-family:'Alfa Slab One',serif;font-size:36px;letter-spacing:-.4px;color:var(--ink);margin-bottom:12px;line-height:1.15;font-weight:400}
+.section-head p{font-size:15px;color:var(--ink-md);max-width:480px;margin:0 auto}
+
+/* PLATFORM VALUES */
+.values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.value-card{background:var(--cream);border:1px solid var(--bdr);border-radius:14px;padding:28px 24px}
+.value-icon{font-size:26px;margin-bottom:14px;display:block}
+.value-card h3{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:8px}
+.value-card p{font-size:13px;color:var(--ink-md);line-height:1.65}
+
+/* COURSE CARD */
+.course-card{max-width:980px;margin:0 auto;background:var(--white);border:1px solid var(--bdr);border-radius:14px;display:grid;grid-template-columns:1fr auto;overflow:hidden}
+.cc-left{padding:44px}
+.cc-badge{display:inline-block;font-size:10.5px;font-weight:600;padding:4px 12px;border-radius:999px;background:var(--rust-lt);color:var(--rust-dk);margin-bottom:16px}
+.cc-left h3{font-family:'Alfa Slab One',serif;font-size:26px;letter-spacing:-.3px;color:var(--ink);margin-bottom:12px;font-weight:400}
+.cc-left .cc-desc{font-size:14px;color:var(--ink-md);line-height:1.75;margin-bottom:12px}
+.cc-prereq{background:var(--cream);border:1px solid var(--bdr);border-radius:10px;padding:16px 18px;margin:20px 0 24px;font-size:13px;color:var(--ink-md);line-height:1.6}
+.cc-prereq strong{color:var(--ink);font-weight:600;display:block;margin-bottom:4px}
+.cc-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.cc-pill{font-size:12px;font-weight:500;padding:5px 13px;border-radius:999px;border:1px solid var(--bdr-md);color:var(--ink-md)}
+.cc-right{background:var(--teal);padding:44px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:220px;text-align:center}
+.cc-price{font-family:'Alfa Slab One',serif;font-size:58px;color:var(--white);line-height:1;margin-bottom:4px;font-weight:400}
+.cc-note{font-size:12px;color:rgba(255,255,255,.45);margin-bottom:28px}
+.cc-enrol{display:block;background:var(--rust);color:var(--white);padding:14px 32px;border-radius:7px;font-size:14px;font-weight:600;text-decoration:none;transition:opacity .18s;width:100%;text-align:center;font-family:'Montserrat',sans-serif}
+.cc-enrol:hover{opacity:.86}
+.cc-secure{font-size:11px;color:rgba(255,255,255,.28);margin-top:10px}
+.cc-module-count{margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);font-size:12px;color:rgba(255,255,255,.5);line-height:1.6;text-align:center}
+.cc-module-count strong{display:block;font-family:'Alfa Slab One',serif;font-size:32px;color:rgba(255,255,255,.9);font-weight:400;line-height:1;margin-bottom:4px}
+
+/* CURRICULUM */
+.learn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.learn-item{background:var(--white);border:1px solid var(--bdr);border-radius:12px;padding:22px 20px;display:flex;gap:14px;align-items:flex-start}
+.learn-num{font-family:'Alfa Slab One',serif;font-size:28px;color:var(--teal-md);line-height:1;flex-shrink:0;font-weight:400;width:36px}
+.learn-text h4{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px}
+.learn-text p{font-size:12.5px;color:var(--ink-md);line-height:1.55}
+
+/* HOW IT WORKS */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.step{background:var(--cream);border:1px solid var(--bdr);border-radius:14px;padding:28px 22px}
+.section-white .step{background:var(--white)}
+.step-num{font-family:'Alfa Slab One',serif;font-size:40px;color:var(--teal-md);line-height:1;margin-bottom:14px;display:block;font-weight:400}
+.step h3{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.step p{font-size:13px;color:var(--ink-md);line-height:1.6}
+
+/* ABOUT */
+.about-block{max-width:980px;margin:0 auto;background:var(--white);border:1px solid var(--bdr);border-radius:14px;padding:48px;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:start}
+.about-avatar{width:80px;height:80px;border-radius:50%;background:var(--teal-lt);border:3px solid var(--teal-md);display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0}
+.about-text h3{font-family:'Alfa Slab One',serif;font-size:22px;color:var(--ink);margin-bottom:4px;font-weight:400}
+.about-text .about-role{font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--ink-lt);margin-bottom:16px;display:block}
+.about-text p{font-size:14px;color:var(--ink-md);line-height:1.7;margin-bottom:10px}
+.about-text p:last-child{margin-bottom:0}
+
+/* ISC2 NOTE */
+.info-note{background:var(--teal-lt);border:1px solid var(--teal-md);border-radius:12px;padding:20px 24px;margin-top:18px;font-size:13.5px;color:var(--teal-dk);line-height:1.6}
+.info-note strong{display:block;margin-bottom:4px;font-size:14px;font-weight:600}
+
+/* FOOTER */
+footer{background:var(--white);border-top:1px solid var(--bdr);padding:28px 48px;display:flex;align-items:center;justify-content:space-between}
+.footer-left{display:flex;align-items:center;gap:20px}
+.footer-left p{font-size:12px;color:var(--ink-lt)}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:12px;color:var(--ink-lt);text-decoration:none;transition:color .18s}
+.footer-links a:hover{color:var(--ink)}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero-pill{animation:fadeUp .4s ease both}
+.hero h1{animation:fadeUp .4s .08s ease both}
+.hero-sub{animation:fadeUp .4s .16s ease both}
+.hero-btns{animation:fadeUp .4s .24s ease both}
+
+/* RESPONSIVE */
+@media(max-width:740px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .hero{padding:64px 24px 56px}
+  .hero h1{font-size:36px}
+  .section{padding:56px 20px}
+  .trust-bar{padding:14px 20px;gap:20px}
+  .course-card{grid-template-columns:1fr}
+  .cc-right{padding:36px 28px}
+  .about-block{grid-template-columns:1fr;gap:24px;padding:32px 24px}
+  footer{flex-direction:column;gap:16px;padding:24px 20px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">
+    <img src="../assets/jd84_banner_websiteheader.png" alt="JD84">
+  </a>
+  <div class="nav-links">
+    <a href="../index.html">← All projects</a>
+    <a href="#courses">Courses</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#about">About</a>
+    <a href="#courses" class="nav-cta">Enrol — £84</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-pill">Online courses · Taught by people who know their stuff</div>
+  <h1>Proper courses at a <em>ridiculous</em> price</h1>
+  <p class="hero-sub">Academy84 is a course platform with one rule: every course has to offer more depth, more value, and more care than anything else available at the price. No fluff. No filler. No excuses.</p>
+  <div class="hero-btns">
+    <a href="#courses" class="btn-fill">See the courses</a>
+    <a href="#about" class="btn-ghost">About Academy84</a>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span>🎓</span> Taught by practitioners, not content farms</div>
+  <div class="trust-item"><span>📦</span> More content than you'd expect at this price</div>
+  <div class="trust-item"><span>♾️</span> Self-paced · lifetime access</div>
+  <div class="trust-item"><span>🚫</span> No subscriptions. No upsells. Ever.</div>
+</div>
+
+<!-- WHAT IS ACADEMY84 -->
+<div class="section section-white">
+  <div class="inner">
+    <div class="section-head">
+      <span class="section-tag">The platform</span>
+      <h2>The rule is simple: more value than anyone else</h2>
+      <p>Every course on Academy84 has to clear the same bar — more depth, more care, and more content than anything else at the price.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <span class="value-icon">🧠</span>
+        <h3>Taught by people who actually do this</h3>
+        <p>Not outsourced to a freelancer who read the same Wikipedia article you could. Every instructor on Academy84 works in their field. The knowledge is real.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">📦</span>
+        <h3>Depth over decoration</h3>
+        <p>No padding, no filler videos, no 30-second modules dressed up as content. If it doesn't add something, it doesn't make the cut.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">💷</span>
+        <h3>Price that makes you do a double take</h3>
+        <p>48-module courses for £84. Lifetime access. No subscription. The value is the point — not a loss-leader for something more expensive.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">🎯</span>
+        <h3>Honest about who it's for</h3>
+        <p>Every course is clear about what you need coming in. No overselling. If a course assumes prior knowledge, it says so upfront.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COURSES -->
+<div class="section section-cream" id="courses">
+  <div class="inner">
+    <div class="section-head">
+      <span class="section-tag">Courses</span>
+      <h2>What's available now</h2>
+      <p>More courses to follow.</p>
+    </div>
+
+    <div class="course-card">
+      <div class="cc-left">
+        <span class="cc-badge">Available now</span>
+        <h3>Introduction to Cybersecurity</h3>
+        <p class="cc-desc">A structured 12-unit course covering the core concepts, terminology, and frameworks that underpin IT security. Built around the ISC2 CC exam domains and taught through real UK case studies, interactive activities, and business-first thinking.</p>
+        <p class="cc-desc">This is the course for IT professionals — networking, infrastructure, systems administration, support — who want to properly understand security. Not a skim. A real grounding in how security works and why the decisions get made the way they do.</p>
+
+        <div class="cc-prereq">
+          <strong>Who this is for</strong>
+          This course assumes you already work in IT and are comfortable with the basics — what a network is, how servers work, what DNS does. It's not designed for people with no IT background. If you work in or around IT and want to understand the security side of it, this is for you.
+        </div>
+
+        <div class="cc-pills">
+          <span class="cc-pill">12 units · 48 modules</span>
+          <span class="cc-pill">ISC2 CC aligned</span>
+          <span class="cc-pill">UK case studies</span>
+          <span class="cc-pill">GDPR &amp; NCSC framing</span>
+          <span class="cc-pill">Interactive activities</span>
+          <span class="cc-pill">End-of-module quizzes</span>
+        </div>
+        <a href="#" class="btn-fill">Enrol now — £84</a>
+      </div>
+      <div class="cc-right">
+        <div class="cc-price">£84</div>
+        <div class="cc-note">one-off · self-paced · lifetime access</div>
+        <a href="#" class="cc-enrol">Enrol now</a>
+        <div class="cc-secure">Secure checkout via Gumroad</div>
+        <div class="cc-module-count">
+          <strong>48</strong>
+          modules included
+        </div>
+      </div>
+    </div>
+
+    <div class="info-note">
+      <strong>A note on certification</strong>
+      This course is aligned to the ISC2 Certified in Cybersecurity (CC) exam domains and will give you a solid foundation if you choose to pursue it. But it's not a dedicated exam prep product — it's a proper introduction to the subject. Think of the cert as something to aim for once the knowledge is there.
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="section section-white" id="how-it-works">
+  <div class="inner">
+    <div class="section-head">
+      <span class="section-tag">How it works</span>
+      <h2>Short modules, real activities, no filler</h2>
+      <p>Every module in every course follows the same structure.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">1</span>
+        <h3>Watch the intro video</h3>
+        <p>5–8 minutes. The concept introduced clearly, grounded in a real-world scenario. No reading from slides, no padding.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <h3>Try the activity</h3>
+        <p>An interactive exercise that makes you apply what you just heard. Not multiple choice trivia — actual thinking required.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <h3>Go deeper</h3>
+        <p>A second video covering the detail, the nuances, and the edge cases that make the difference between knowing a term and understanding a concept.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">4</span>
+        <h3>Test yourself</h3>
+        <p>A short quiz covering terminology, concepts, and scenario judgement. The three things you actually need to have absorbed.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CURRICULUM -->
+<div class="section section-cream">
+  <div class="inner">
+    <div class="section-head">
+      <span class="section-tag">Curriculum — Introduction to Cybersecurity</span>
+      <h2>12 units. 48 modules. Everything covered.</h2>
+      <p>Each unit builds on the last. By unit 12 you'll have a complete picture of how security works — and why it matters in a business context.</p>
+    </div>
+    <div class="learn-grid">
+      <div class="learn-item"><span class="learn-num">1</span><div class="learn-text"><h4>Cybersecurity Fundamentals</h4><p>CIA Triad, AAA, threat actors, risk mechanics, least privilege, Zero Trust</p></div></div>
+      <div class="learn-item"><span class="learn-num">2</span><div class="learn-text"><h4>Networking Fundamentals</h4><p>OSI model, TCP/IP, ports and DNS, switches vs routers, firewalls</p></div></div>
+      <div class="learn-item"><span class="learn-num">3</span><div class="learn-text"><h4>Principles and Concepts</h4><p>Security as business insurance, control types — preventive, detective, corrective, deterrent</p></div></div>
+      <div class="learn-item"><span class="learn-num">4</span><div class="learn-text"><h4>Threats and Vulnerabilities</h4><p>Zero-days, malware types, social engineering, OWASP Top 10, SQL injection</p></div></div>
+      <div class="learn-item"><span class="learn-num">5</span><div class="learn-text"><h4>Identity and Access</h4><p>Zero Trust, MFA factors, JML lifecycle, privilege creep, MAC/RBAC/ABAC/DAC</p></div></div>
+      <div class="learn-item"><span class="learn-num">6</span><div class="learn-text"><h4>Security Operations</h4><p>SOC, SIEM, alert fatigue, incident response lifecycle</p></div></div>
+      <div class="learn-item"><span class="learn-num">7</span><div class="learn-text"><h4>Cryptography</h4><p>Symmetric vs asymmetric, hashing, PKI, TLS and HTTPS</p></div></div>
+      <div class="learn-item"><span class="learn-num">8</span><div class="learn-text"><h4>Network Security</h4><p>Defence in depth, DMZ, VPNs, IDS vs IPS, network segmentation</p></div></div>
+      <div class="learn-item"><span class="learn-num">9</span><div class="learn-text"><h4>Endpoint and Application Security</h4><p>Patch management, hardening, EDR, malware protection</p></div></div>
+      <div class="learn-item"><span class="learn-num">10</span><div class="learn-text"><h4>Policies and Governance</h4><p>Policy hierarchy, AUP, CISO role, risk lifecycle, shadow IT</p></div></div>
+      <div class="learn-item"><span class="learn-num">11</span><div class="learn-text"><h4>BCDR</h4><p>3-2-1 rule, backup types, immutable backups, RPO/RTO, DRP testing</p></div></div>
+      <div class="learn-item"><span class="learn-num">12</span><div class="learn-text"><h4>Final Prep</h4><p>ISC2 CC exam technique, manager mindset, Cyber Essentials 5 pillars, career pathways</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section section-white" id="about">
+  <div class="inner">
+    <div class="section-head">
+      <span class="section-tag">About</span>
+      <h2>Built by one person with a simple standard</h2>
+      <p>If it isn't genuinely better value than the competition, it doesn't go on the platform.</p>
+    </div>
+    <div class="about-block">
+      <div class="about-avatar">👨‍💻</div>
+      <div class="about-text">
+        <h3>JD</h3>
+        <span class="about-role">Academy84</span>
+        <p>I built Academy84 because I kept looking at the price of online courses and thinking the same thing: you can charge less and still do more. A 48-module cybersecurity course with interactive activities and proper UK case studies for £84 isn't a loss-leader. It's just what the course should cost.</p>
+        <p>The cybersecurity course comes from my day job — I'm a cybersecurity engineer and I deliver this material in a professional classroom setting. The content has been road-tested with real people. But Academy84 isn't limited to one subject. More courses are in development across different areas, all built to the same standard: taught by someone who actually knows what they're talking about, more content than you'd expect, priced so the decision is easy.</p>
+        <p>I also built Vault84 (a free Android finance app) and run the JD84 Life YouTube channel. Everything under the JD84 name follows the same logic — more value than you'd expect, no nonsense, built properly.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-left">
+    <a href="../index.html" class="logo" style="text-decoration:none">
+      <img src="../assets/jd84_banner_websiteheader.png" alt="JD84" style="height:28px;width:auto;">
+    </a>
+    <p>© 2026 JD84</p>
+  </div>
+  <div class="footer-links">
+    <a href="mailto:contact.jd84@gmail.com">Contact</a>
+    <a href="../index.html">← Back to JD84</a>
+  </div>
+</footer>
+
+</body>
+</html>
